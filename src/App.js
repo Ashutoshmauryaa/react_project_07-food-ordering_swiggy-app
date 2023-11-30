@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "./components/Header";
+import Body from "./components/Body";
+import { Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import appStore from "./Redux/appStore";
+import Restaurant from "./utils/RestaurantContext";
+import { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import { Footer } from "./components/Footer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Redux wrap
+    <Provider store={appStore}>
+      {/* Context API  wrap*/}
+      <Restaurant>
+        <div>
+          <Header />
+          <Outlet />
+          <Footer />
+          <Toaster position="top-center" />
+        </div>
+      </Restaurant>
+    </Provider>
   );
 }
 
