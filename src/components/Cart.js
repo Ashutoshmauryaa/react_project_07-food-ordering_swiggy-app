@@ -25,9 +25,9 @@ const Cart = () => {
     // document.getElementById("searchbutton").style.visibility = "hidden";
   }, [addItem, removeItem]);
 
-  const handleClearCart = () => {
-    dispatch(clearCart());
-  };
+  // const handleClearCart = () => {
+  //   dispatch(clearCart());
+  // };
   const handleAddItem = (item) => {
     dispatch(addItem(item));
   };

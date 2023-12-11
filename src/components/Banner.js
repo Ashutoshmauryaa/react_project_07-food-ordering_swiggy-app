@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
+import React from "react";
 import { CDN_URL } from "../utils/constant";
-import { RestaurantContext } from "../utils/RestaurantContext";
 
 const Banner = (props) => {
   const { bannerData } = props;

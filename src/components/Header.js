@@ -7,7 +7,6 @@ import {
   HomeIcon,
   OfflineSignal,
   OnlineSignal,
-  ProfileIcon,
   SearchIcon,
 } from "../utils/icon";
 import { useSelector } from "react-redux";
@@ -25,7 +24,7 @@ const Header = () => {
     useContext(RestaurantContext);
   // console.log(cartItems);
   return (
-    <div className="flex justify-between shadow-lg m-1 ">
+    <div className="flex justify-between shadow-lg m-1">
       <div className="logo-container">
         <Link to="/">
           <img className="w-32" src={logo} alt="logo" />

@@ -2,7 +2,6 @@ import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import GoogleButton from "react-google-button";
 import toast from "react-hot-toast";
 
 const Signup = ({ handleClose }) => {

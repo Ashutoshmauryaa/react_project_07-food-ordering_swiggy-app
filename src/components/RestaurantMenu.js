@@ -2,7 +2,7 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { CDN_URL } from "../utils/constant";
 import sorry from "../logo/sorry.jpeg";
 import { RatingIcon, RupeeIcon, TimeIcon } from "../utils/icon";
@@ -10,7 +10,7 @@ import offerIcon from "../logo/OfferIconCart.webp";
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const restaurantInfo = useRestaurantMenu(resId);
-  const [showIndex, setShowIndex] = useState(null);
+  // const [showIndex, setShowIndex] = useState(null);
 
   // console.log("---" + restaurantInfo);
 

@@ -2,8 +2,7 @@ import { CDN_URL } from "../utils/constant";
 import { RatingIcon } from "../utils/icon";
 const RestaurantCard = (props) => {
   const { resdata } = props;
-  const { name, avgRating, costForTwo, cuisines, sla, cloudinaryImageId } =
-    resdata?.info;
+  const { name, avgRating, cuisines, sla, cloudinaryImageId } = resdata?.info;
   return (
     <div className="m-2 p-1 w-[240px]  rounded-lg hover:shadow-2xl hover:w-[260px] ">
       <img

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -15,14 +15,8 @@ const Body = () => {
   }, []);
 
   const PromotedRestaurant = withPromotedLabel(RestaurantCard); // Higher order component
-  const {
-    restaurantlist,
-    setrestaurantList,
-    filteredRestaurant,
-    setfilteredRestaurant,
-    banner,
-    widget,
-  } = useContext(RestaurantContext);
+  const { restaurantlist, filteredRestaurant, banner, widget } =
+    useContext(RestaurantContext);
 
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) {
@@ -33,7 +27,7 @@ const Body = () => {
   return restaurantlist.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body ">
+    <div className="">
       <div className="m-2 p-2 overflow-x-auto ...">
         <h1 className=" p-1 mx-5 font-bold font-40 text-2xl">
           Best offers for you

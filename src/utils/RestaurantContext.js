@@ -11,7 +11,7 @@ const Restaurant = ({ children }) => {
   const [banner, setfilteredBanner] = useState([]);
   const [widget, setWidget] = useState([]);
   const [user, setUser] = useState(null);
-  const [Developed, setDeveloped] = useState({
+  const [Developed] = useState({
     name: "Ashutosh Kumar",
     email: "ashutosh.mauryavanshi96@gmail.com",
     contact: "+91-8750524716",
