@@ -9,7 +9,6 @@ import Error from "./components/Error";
 import Body from "./components/Body";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Cart from "./components/Cart";
-import Restaurant from "./utils/RestaurantContext";
 
 const approuter = createBrowserRouter([
   {
